@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:newsapp/view/Homepage/Home/latest.dart';
 
+import '../Trending/trending.dart';
+
 class Homebody extends ConsumerStatefulWidget {
   const Homebody({super.key});
 
@@ -41,7 +43,15 @@ class _HomebodyState extends ConsumerState<Homebody> {
                   'Trending',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
-                Text('See all')
+                InkWell(
+                    child: Text('See all'),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  TrendingPage()));
+                    })
               ],
             ),
             // Container(

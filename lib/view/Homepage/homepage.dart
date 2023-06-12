@@ -1,10 +1,12 @@
 // ignore_for_file: prefer_const_constructors, unused_import
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:newsapp/view/Homepage/body.dart';
+import 'package:newsapp/view/Homepage/Notifications/notification.dart';
 
-import 'latest.dart';
+import 'Home/body.dart';
 
 class Homepage extends ConsumerStatefulWidget {
   const Homepage({super.key});
@@ -41,7 +43,13 @@ class _HomepageState extends ConsumerState<Homepage> {
                           //  border: Border.all(color: Colors.grey)
                         ),
                         child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          NotificationPage()));
+                            },
                             icon: Icon(Icons.notification_add_outlined)),
                       ),
                     )
