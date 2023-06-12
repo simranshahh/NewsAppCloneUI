@@ -5,7 +5,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:newsapp/view/auth/forgetpassword/forgotpassword.dart';
 import 'package:newsapp/view/auth/signup.dart';
 
-import '../Homepage/Home/homepage.dart';
+import '../Homepage/homepage.dart';
+
 
 
 class Loginpage extends ConsumerStatefulWidget {

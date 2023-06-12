@@ -3,8 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../Homepage/Home/homepage.dart';
-
+import '../../Homepage/homepage.dart';
 
 class Newpwsuccessful extends ConsumerStatefulWidget {
   const Newpwsuccessful({super.key});

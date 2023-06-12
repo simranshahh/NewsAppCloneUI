@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:newsapp/view/Homepage/Home/homepage.dart';
+
+import '../homepage.dart';
 
 class TrendingPage extends ConsumerStatefulWidget {
   const TrendingPage({super.key});
