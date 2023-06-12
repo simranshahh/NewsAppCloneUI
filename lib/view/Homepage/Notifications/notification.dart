@@ -96,7 +96,10 @@ class _NotificationPageState extends ConsumerState<NotificationPage> {
                                         ],
                                       ),
                                     ),
-                                    Text('15m ago'),
+                                    Text(
+                                      '15m ago',
+                                      style: TextStyle(color: Colors.red),
+                                    ), //practice
                                   ])
                             ],
                           ),
