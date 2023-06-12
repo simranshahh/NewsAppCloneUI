@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:newsapp/view/Homepage/body.dart';
+import 'package:newsapp/view/Homepage/Home/body.dart';
 
 import 'latest.dart';
 

@@ -1,9 +1,10 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, file_names
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../Homepage/homepage.dart';
+import '../../Homepage/Home/homepage.dart';
+
 
 class Newpwsuccessful extends ConsumerStatefulWidget {
   const Newpwsuccessful({super.key});

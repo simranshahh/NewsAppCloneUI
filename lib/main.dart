@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/view/Homepage/body.dart';
-import 'package:newsapp/view/startscreen/onboard.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:newsapp/view/Homepage/Home/homepage.dart';
 import 'package:newsapp/view/startscreen/splashscreen.dart';
 
+import 'view/Homepage/Home/tabbar/all.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,8 +16,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Splashscreen(),
-    );
+        debugShowCheckedModeBanner: false, home: Homepage());
   }
 }
