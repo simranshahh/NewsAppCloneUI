@@ -1,5 +1,8 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:newsapp/view/AurthorProfile/profile.dart';
 import 'package:newsapp/view/Homepage/Notifications/notification.dart';
 import 'package:newsapp/view/Homepage/homepage.dart';
 import 'package:newsapp/view/startscreen/splashscreen.dart';
@@ -17,8 +20,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: NotificationPage());
+        debugShowCheckedModeBanner: false, home: ProfilePage());
   }
 }
-
-
