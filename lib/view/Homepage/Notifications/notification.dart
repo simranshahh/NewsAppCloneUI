@@ -59,6 +59,36 @@ class _NotificationPageState extends ConsumerState<NotificationPage> {
 
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            height: 70.0,
+            width: double.maxFinite,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius:
+                    BorderRadius.vertical(top: Radius.circular(30.0))),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                IconButton(
+                  icon: Icon(Icons.favorite),
+                  onPressed: () {},
+                ),
+                Text('24.5k'),
+                IconButton(
+                  icon: Icon(Icons.chat),
+                  onPressed: () {},
+                ),
+                Text('1k'),
+                IconButton(
+                  icon: Icon(Icons.bookmark),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
+        ),
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: SingleChildScrollView(
@@ -172,8 +202,6 @@ class _NotificationPageState extends ConsumerState<NotificationPage> {
                                                 ), //practice
                                               ]),
                                         ),
-                                        
-
                                         ElevatedButton(
                                             onPressed: () {},
                                             style: ElevatedButton.styleFrom(
@@ -222,14 +250,14 @@ class NotificationDetails {
   String source;
   String notice;
   String time;
-  bool? follow=false;
+  bool? follow = false;
 
   NotificationDetails(
       {required this.image,
       required this.source,
       required this.notice,
       required this.time,
-     this.follow});
+      this.follow});
 }
 
 
