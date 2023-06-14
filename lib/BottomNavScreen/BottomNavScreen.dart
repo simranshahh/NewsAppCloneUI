@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../view/AurthorProfile/profile.dart';
 import '../view/Bookmark/bookmark.dart';
 import '../view/Explore/explore.dart';
 import '../view/Homepage/homepage.dart';
+import '../view/Profile/profile.dart';
 
 class BottomNavScreen extends ConsumerStatefulWidget {
   const BottomNavScreen({super.key});

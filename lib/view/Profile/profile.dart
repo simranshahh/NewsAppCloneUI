@@ -5,14 +5,16 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:newsapp/view/AurthorProfile/news.dart';
 import 'package:newsapp/view/AurthorProfile/recent.dart';
 
-class AurthorProfilepage extends ConsumerStatefulWidget {
-  const AurthorProfilepage({super.key});
+import 'editprofile.dart';
+
+class ProfilePage extends ConsumerStatefulWidget {
+  const ProfilePage({super.key});
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() => _AurthorProfilepageState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _ProfilePageState();
 }
 
-class _AurthorProfilepageState extends ConsumerState<AurthorProfilepage> {
+class _ProfilePageState extends ConsumerState<ProfilePage> {
   bool _isFollow = false;
   _accept() {
     setState(() {
@@ -38,6 +40,7 @@ class _AurthorProfilepageState extends ConsumerState<AurthorProfilepage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
+                    Text('Profile'),
                     IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
                   ],
                 ),
@@ -99,7 +102,7 @@ class _AurthorProfilepageState extends ConsumerState<AurthorProfilepage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'BBC News',
+                        'Wilson Franci',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 18),
                       ),
@@ -107,7 +110,7 @@ class _AurthorProfilepageState extends ConsumerState<AurthorProfilepage> {
                         height: height * 0.01,
                       ),
                       Text(
-                          "is an operational business division of the British Broadcasting Corporation responsible for the gathering and broadcasting of news and current affair"),
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."),
                       SizedBox(
                         height: height * 0.02,
                       ),
@@ -118,13 +121,19 @@ class _AurthorProfilepageState extends ConsumerState<AurthorProfilepage> {
                             width: width * 0.45,
                             height: height * 0.07,
                             child: ElevatedButton(
-                              onPressed: _accept,
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (BuildContext context) =>
+                                            EditProfilepage()));
+                              },
                               style: ElevatedButton.styleFrom(
                                 primary: _isFollow ? Colors.grey : Colors.blue,
                                 onPrimary: Colors.white,
                               ),
                               child: Text(
-                                _isFollow ? 'Following' : 'Follow',
+                                _isFollow ? 'Following' : 'Edit Profile',
                                 style: TextStyle(
                                   fontSize: 16,
                                 ),
