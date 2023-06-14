@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:newsapp/view/Profile/profile.dart';
 
 class SetttingPage extends ConsumerStatefulWidget {
   const SetttingPage({super.key});
@@ -24,7 +25,15 @@ class _SetttingPageState extends ConsumerState<SetttingPage> {
             children: [
               Row(
                 children: [
-                  Icon(Icons.arrow_back),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    ProfilePage()));
+                      },
+                      icon: Icon(Icons.arrow_back)),
                   SizedBox(
                     width: width * 0.30,
                   ),
