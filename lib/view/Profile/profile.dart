@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:newsapp/view/AurthorProfile/news.dart';
 import 'package:newsapp/view/AurthorProfile/recent.dart';
+import 'package:newsapp/view/Profile/setting.dart';
 
 import 'editprofile.dart';
 
@@ -41,7 +42,15 @@ class _ProfilePageState extends ConsumerState<ProfilePage> {
                   children: [
                     IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
                     Text('Profile'),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      SetttingPage()));
+                        },
+                        icon: Icon(Icons.settings)),
                   ],
                 ),
                 Row(
